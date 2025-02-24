@@ -1,0 +1,17 @@
+{
+    "settings": {
+        "convert2npz": true,
+        "convert2png": true,
+        "filetype": ".asc",
+        "dataroot": "./example/data",
+        "target_folder": "./example/preprocess_data",
+        "remove_pattern": "dm1d0000.asc",
+        "num_workers": 16,
+        "genMask":false
+    },
+    "folders": {
+        "folder1": "train",
+        "dqmviodnfolder2": "validation",
+        "qfqadavdwrrhy42": "test"
+    }
+}

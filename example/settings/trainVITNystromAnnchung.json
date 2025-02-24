@@ -1,0 +1,56 @@
+{
+    "settings": {
+        "dataroot": "./example/preprocess_data",
+        "geodata_fn": "hy2correct.asc",
+        "loss_record_fn": "lossRecord.csv",
+        "csv_fn": "raintype.csv",
+        "device": "auto",
+        "log_dir_root": "./example/train/VITNystrom/logs/",
+        "ckpt_dir": "./example/train/VITNystrom/models/",
+        "model_filename": "VITNystorm.pth",
+        "latest_model_filename": "VITNystorm_latest.pth",
+        "load_model_path": "",
+        "learning_curve_title": "Anchung Rain Prediction"
+    },
+    "hyperparameters": {
+        "load_models": false,
+        "batch_size": 16,
+        "criterionalgorithm": "MSELoss",
+        "optimizeralgorithm": "Adam",
+        "image_width": 256,
+        "image_height": 256,
+        "patch_size": 16,
+        "n_epoch": 3,
+        "warmup_epoch": 2,
+        "sample_interval": 100,
+        "use_gradient_accumulations": false,
+        "gradient_accumulations": 16,
+        "clip_value": 0.1
+    },
+    "padding": {
+        "p_up": 0,
+        "p_down": 0,
+        "p_left": 0,
+        "p_right": 0
+    },
+    "optimizer": {
+        "Adam": {
+            "params": "",
+            "lr": 0.001,
+            "betas": [
+                0.9,
+                0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 0,
+            "amsgrad": false
+        }
+    },
+    "criterion": {
+        "MSELoss": {
+            "size_average": "None",
+            "reduce": "None",
+            "reduction": "mean"
+        }
+    }
+}

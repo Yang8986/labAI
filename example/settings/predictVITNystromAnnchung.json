@@ -1,0 +1,20 @@
+{
+    "datasetType": "AnChungDataset",
+    "predictStructurePath": "./example/train/VITNystrom/models/example/structure.pt",
+    "predictWeightPath": "./example/train/VITNystrom/models/example/VITNystorm.pth",
+    "predictOutputDirPath": "./example/predict/VITNystrom/",
+    "predictMaskPath": null,
+    "device": "cpu",
+    "criterionType": "RMSELoss",
+    "vmin": 0.0,
+    "vmax": 0.0,
+    "datasetConfig": {
+        "mode": "test",
+        "dataDir": "./example/preprocess_data/",
+        "geoData_fn": "hy2correct.asc",
+        "image_size": [
+            256,
+            256
+        ]
+    }
+}

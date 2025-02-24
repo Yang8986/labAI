@@ -1,0 +1,40 @@
+{
+    "settings":{
+        "dataroot": "./example/preprocess_data",
+        "geodata_fn": "hy2correct.asc",
+        "loss_record_fn": "lossRecord.csv",
+        "csv_fn": "raintype.csv",
+        "device": "auto",
+        "log_dir_root": "./example/train/Unet/logs/",
+        "ckpt_dir": "./example/train/Unet/models/",
+        "model_filename": "unet.pth",
+        "latest_model_filename" : "unet_latest.pth",
+        "load_model_path" : "",
+        "learning_curve_title" : "Rain Prediction"
+    },
+    "hyperparameters":{
+        "load_models": false,
+        "bilinear": false,
+        "use_layer": true,
+        "batch_size": 16,
+        "criterionalgorithm": "MSELoss",
+        "optimizeralgorithm": "Adam",
+        "image_width": 256,
+        "image_height": 256,
+        "n_epoch": 5,
+        "warmup_epoch": 3,
+        "clip_value": 0.1
+    },
+
+    "Adam":{
+        "lr": 0.001,
+        "beta1": 0.9,
+        "beta2": 0.999
+    },
+    "RMSprop":{
+        "lr": 5e-5,
+        "weight_decay": 1e-8,
+        "momentum": 0.999,
+        "foreach" : "True"
+    }
+}
